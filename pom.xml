@@ -42,10 +42,8 @@
     <proto-google-cloud-storage-v2.version>2.40.0-alpha</proto-google-cloud-storage-v2.version>
     <opencsv.version>5.7.1</opencsv.version>
     <adal4j.version>1.6.7</adal4j.version>
-    <httpclient5.version>5.4.2</httpclient5.version>
     <httpclient4.version>4.5.14</httpclient4.version>
     <cucumber.version>7.18.1</cucumber.version>
-    <assertj.version>3.24.2</assertj.version>
     <json.version>20230227</json.version>
     <product-reference.version>1.0.14</product-reference.version>
     <product-reference.acceptance.version>1.0.2</product-reference.acceptance.version>
@@ -181,11 +179,6 @@
         <version>${adal4j.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.apache.httpcomponents.client5</groupId>
-        <artifactId>httpclient5</artifactId>
-        <version>${httpclient5.version}</version>
-      </dependency>
-      <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
         <version>${httpclient4.version}</version>
@@ -224,11 +217,6 @@
         <groupId>io.cucumber</groupId>
         <artifactId>cucumber-spring</artifactId>
         <version>${cucumber.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.assertj</groupId>
-        <artifactId>assertj-core</artifactId>
-        <version>${assertj.version}</version>
       </dependency>
       <dependency>
         <groupId>org.json</groupId>
