@@ -19,8 +19,8 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <spring-boot.version>4.0.6</spring-boot.version>
-    <spring-cloud.version>2025.0.0</spring-cloud.version>
-    <spring-cloud-gcp.version>7.4.3</spring-cloud-gcp.version>
+    <spring-cloud.version>2025.1.1</spring-cloud.version>
+    <spring-cloud-gcp.version>8.0.3</spring-cloud-gcp.version>
 
     <fwmt.version>27.0.0</fwmt.version>
     <lombok.version>1.18.46</lombok.version>
