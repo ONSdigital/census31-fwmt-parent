@@ -15,32 +15,6 @@ steps:
               <password>$${TOKEN}</password>
             </server>
           </servers>
-          <mirrors>
-            <mirror>
-              <id>artifact-registry</id>
-              <name>Artifact Registry</name>
-              <url>https://europe-west2-maven.pkg.dev/c31-fwmtg-ci-prod/fwmt-maven-snapshot</url>
-              <mirrorOf>uk.gov.ons.census.fwmt*</mirrorOf>
-          </mirror>
-        </mirrors>
-
-        <profiles>
-          <profile>
-            <id>artifact-registry</id>
-            <repositories>
-              <repository>
-                <id>artifact-registry</id>
-                <url>https://europe-west2-maven.pkg.dev/c31-fwmtg-ci-prod/fwmt-maven-snapshot</url>
-                <releases><enabled>false</enabled></releases>
-                <snapshots><enabled>true</enabled></snapshots>
-              </repository>
-            </repositories>
-          </profile>
-        </profiles>
-      
-        <activeProfiles>
-          <activeProfile>artifact-registry</activeProfile>
-        </activeProfiles>
         </settings>
         EOF
 
@@ -76,7 +50,7 @@ steps:
       - -ceu
       - |
         VERSION="$(cat /workspace/effective-version.txt)"
-        REPO_URL="https://${_REGION}-maven.pkg.dev/${PROJECT_ID}/${_REPO_SUFFIX}"
+        REPO_URL="artifactregistry://${_REGION}-maven.pkg.dev/${PROJECT_ID}/${_REPO_SUFFIX}"
 
         echo "Snapshot version: $${VERSION}"
         echo "Repository URL: $${REPO_URL}"
@@ -86,7 +60,7 @@ steps:
         grep -n '<id>' /workspace/settings.xml || true
 
         mvn -B -ntp -e -X -s /workspace/settings.xml deploy -DskipTests \
-          -DaltDeploymentRepository=artifact-registry::https://${_REGION}-maven.pkg.dev/${PROJECT_ID}/${_REPO_SUFFIX}
+          -DaltDeploymentRepository=artifact-registry::artifactregistry://${_REGION}-maven.pkg.dev/${PROJECT_ID}/${_REPO_SUFFIX}
 
   - name: gcr.io/google.com/cloudsdktool/google-cloud-cli:slim
     id: Log Published Coordinates
