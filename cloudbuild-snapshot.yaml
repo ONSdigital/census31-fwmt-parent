@@ -20,7 +20,7 @@ steps:
               <id>artifact-registry</id>
               <name>Artifact Registry</name>
               <url>https://europe-west2-maven.pkg.dev/c31-fwmtg-ci-prod/fwmt-maven-snapshot</url>
-              <mirrorOf>*</mirrorOf>
+              <mirrorOf>uk.gov.ons.census.fwmt*</mirrorOf>
           </mirror>
         </mirrors>
 
