@@ -49,7 +49,17 @@ steps:
     args:
       - -ceu
       - |
-        mvn -B -ntp -s /workspace/settings.xml deploy -DskipTests \
+        VERSION="$(cat /workspace/effective-version.txt)"
+        REPO_URL="https://${_REGION}-maven.pkg.dev/${PROJECT_ID}/${_REPO_SUFFIX}"
+
+        echo "Snapshot version: $${VERSION}"
+        echo "Repository URL: $${REPO_URL}"
+        echo "Branch name: ${BRANCH_NAME:-<unset>}"
+        echo "Short SHA: ${SHORT_SHA:-<unset>}"
+        echo "Settings server ids:"
+        grep -n '<id>' /workspace/settings.xml || true
+
+        mvn -B -ntp -e -X -s /workspace/settings.xml deploy -DskipTests \
           -DaltDeploymentRepository=artifact-registry::https://${_REGION}-maven.pkg.dev/${PROJECT_ID}/${_REPO_SUFFIX}
 
   - name: gcr.io/google.com/cloudsdktool/google-cloud-cli:slim
