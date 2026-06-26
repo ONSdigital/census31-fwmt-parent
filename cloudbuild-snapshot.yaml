@@ -60,7 +60,7 @@ steps:
         grep -n '<id>' /workspace/settings.xml || true
 
         mvn -B -ntp -e -X -s /workspace/settings.xml deploy -DskipTests \
-          -DaltDeploymentRepository=artifact-registry::artifactregistry://${_REGION}-maven.pkg.dev/${PROJECT_ID}/${_REPO_SUFFIX}
+          -DaltDeploymentRepository=artifact-registry::https://${_REGION}-maven.pkg.dev/${PROJECT_ID}/${_REPO_SUFFIX}
 
   - name: gcr.io/google.com/cloudsdktool/google-cloud-cli:slim
     id: Log Published Coordinates
