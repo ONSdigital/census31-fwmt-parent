@@ -73,7 +73,7 @@ steps:
         echo "Repository: ${_REPO_SUFFIX}"
 
 substitutions:
-  _REPO_SUFFIX: fwmt-maven-snapshot
+  _REPO_SUFFIX: fwmtg-maven-snapshot
   _REGION: europe-west2
 
 options:
