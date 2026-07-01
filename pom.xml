@@ -46,7 +46,7 @@
     <httpclient4.version>4.5.14</httpclient4.version>
     <cucumber.version>7.18.1</cucumber.version>
     <json.version>20230227</json.version>
-    <product-reference.version>1.0.14</product-reference.version>
+    <product-reference.version>1.0.0-local.20260701092235</product-reference.version>
     <product-reference.acceptance.version>1.0.2</product-reference.acceptance.version>
 
     <skip.integration.tests>true</skip.integration.tests>
@@ -225,7 +225,7 @@
         <version>${json.version}</version>
       </dependency>
       <dependency>
-        <groupId>uk.gov.ons.ctp.integration.common</groupId>
+        <groupId>ons.census.int.common</groupId>
         <artifactId>product-reference</artifactId>
         <version>${product-reference.version}</version>
       </dependency>
