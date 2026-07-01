@@ -20,17 +20,10 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <spring-boot.version>4.0.6</spring-boot.version>
-<<<<<<< HEAD
-    <spring-cloud.version>2025.0.0</spring-cloud.version>
-    <spring-cloud-gcp.version>7.4.3</spring-cloud-gcp.version>
-
-    <fwmt.version>27.0.0</fwmt.version>
-=======
     <spring-cloud.version>2025.1.1</spring-cloud.version>
     <spring-cloud-gcp.version>8.0.3</spring-cloud-gcp.version>
 
     <fwmt.version>27.0.1</fwmt.version>
->>>>>>> FMT-13_cloud-build-implementation
     <lombok.version>1.18.46</lombok.version>
     <mapstruct.version>1.5.5.Final</mapstruct.version>
     <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
@@ -53,11 +46,7 @@
     <httpclient4.version>4.5.14</httpclient4.version>
     <cucumber.version>7.18.1</cucumber.version>
     <json.version>20230227</json.version>
-<<<<<<< HEAD
     <product-reference.version>1.0.14</product-reference.version>
-=======
-    <product-reference.version>1.0.0-local.20260701092235</product-reference.version>
->>>>>>> FMT-13_cloud-build-implementation
     <product-reference.acceptance.version>1.0.2</product-reference.acceptance.version>
 
     <skip.integration.tests>true</skip.integration.tests>
@@ -236,11 +225,7 @@
         <version>${json.version}</version>
       </dependency>
       <dependency>
-<<<<<<< HEAD
-        <groupId>uk.gov.ons.ctp.integration.common</groupId>
-=======
         <groupId>ons.census.int.common</groupId>
->>>>>>> FMT-13_cloud-build-implementation
         <artifactId>product-reference</artifactId>
         <version>${product-reference.version}</version>
       </dependency>
